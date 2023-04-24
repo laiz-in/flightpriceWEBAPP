@@ -1,0 +1,113 @@
+body{
+  background: linear-gradient(to right, rgb(186, 136, 219),rgb(122, 219, 236))
+}
+.navbar #head {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 15px;
+  margin-left: 20%;
+  color: #53055c;
+  font-weight: 800;
+  font-size: 55px;
+}
+.navbar #head a{
+  color: #1d0220;
+  font-weight: 800;
+  font-size: 55px;
+}
+.navbar #head a:hover {
+  color: #850641;
+}
+.navbar #head img {
+  width: 50px;
+  height: 50px;
+  
+}
+.arrow img{
+  width :35px;
+  height: 35px;
+}
+.arrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#button{
+  background-color: rgb(5, 5, 82);
+  -webkit-box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53); 
+  box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.43);
+  color:white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  min-width: 200px;
+  min-height: 40px;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 7px 7px 7px 7px;
+  border: none;
+}
+#button:hover{
+  background-color: rgb(14, 14, 66);
+
+}
+h4{
+  color: rgb(14, 14, 66);
+  font-weight: 600;
+  font-size: 45px;
+}
+h3{
+  width: fit-content;
+  background-color: rgb(14, 14, 66);
+  color: white;
+  font-weight: 700;
+  font-size: 45px;
+}
+.card-body,.card{
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  padding: 8px;
+  font-size: 16px;
+  background-color: rgb(47, 74, 133);
+  color: white;
+  -webkit-box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53); 
+   box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.43);
+}
+.card-body .options{
+  background-color: rgb(198, 122, 233);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  -webkit-box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53); 
+   box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.43);
+  padding: 3px;
+  color: rgb(194, 230, 253);
+}
+
+/* ============================================================================================================================================================= */
+
+@media screen and (max-width: 768px) {
+  .navbar #head a{
+    color: #1d0220;
+    font-weight: 800;
+    font-size: 25px;
+  }
+  .arrow .places-row{
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar #head a:hover {
+    color: #830540;
+  }
+  .navbar #head {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
+    margin-left: 3px;
+    color: #1d0220;
+    font-weight: 800;
+    font-size: 19px;
+  }
+}
