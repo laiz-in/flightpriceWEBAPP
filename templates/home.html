@@ -26,7 +26,7 @@
         <div id="head" class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/">
-                    FlightPriceEstimator <img src="static\flight-icon.svg" alt="Flight Icon">
+                    FlightPriceEstimator <img src="static\assets\flight-icon.svg" alt="Flight Icon">
                 </a>
             </div>
         </div>
@@ -43,7 +43,7 @@
         <form action="\predict" method="post">
 
             <div class="row places-row ">
-                <div class="col-sm-5">
+                <div class="col-5">
                     <div class="card">
                         <div class="card-body">
                             <!-- Source -->
@@ -55,15 +55,15 @@
                                 <option value="Hyderabad">HYD (HYDERABAD)</option>
                                 <option value="Kolkata">CCU (KOLKATA)</option>
                                 <option value="Chennai">MMA (CHENNAI)</option>
-                                <option value="Ahmedabad">AMD (ahammedabad)</option>
+                                <option value="Ahmedabad">AMD (AHAMMEDABAD)</option>
                             </select>
                         </div>
                     </div>
                 </div>
-                <div class="arrow">
-                    <img src="static\travel-icon.png" alt="travel Icon">
+                <div class="col-2">
+                    <img src="static\assets\travel-icon.png" alt="travel Icon">
                 </div>
-                <div class="col-sm-5">
+                <div class="col-5">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">To</h5>
@@ -74,7 +74,7 @@
                                 <option value="Hyderabad">HYD (HYDERABAD)</option>
                                 <option value="Kolkata">CCU (KOLKATA)</option>
                                 <option value="Chennai">MMA (CHENNAI)</option>
-                                <option value="Ahmedabad">AMD (ahammedabad)</option>
+                                <option value="Ahmedabad">AMD (AHAMMEDABAD)</option>
                                 <option value="Delhi">DEL (DELHI)</option>
                             </select>
                         </div>
@@ -85,7 +85,7 @@
             <br>
             <br>
             <div class="row">
-                <div class="col-sm-5 ">
+                <div class="col-sm-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Departure Date</h5>
@@ -94,19 +94,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="arrow places-row">
-                    <img src="static\calendar-icon.svg" alt="travel Icon">
-                </div>
-                <br>
-                <div class="col-sm-5">
+                <div class="col-sm-4 ">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Arrival Date</h5>
-                            <!-- Arrival -->
-                            <input class="options" type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
+                            <h5 class="card-title">Duration hours</h5>
+                            <!-- Departure -->
+                            <input type="number" step="any" max="50" name="Duration">
                         </div>
                     </div>
                 </div>
+                <br>
+              
             </div>
 
 
@@ -114,7 +112,7 @@
             <br>
 
             <div class="row">
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Stopage</h5>
@@ -127,10 +125,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="arrow places-row">
-                    <img src="static\flight-icon.svg" alt="travel Icon">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Class</h5>
+                            <!-- Total Stops -->
+                            <select class="options" name="Classes" required="required">
+                                <option value="Economy">Economy</option>
+                                <option value="'Premium Economy">'Premium Economy</option>
+                                <option value="Business">Business</option>
+                                <option value="First">First</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Airline</h5>
@@ -162,7 +171,7 @@
 
         <br>
         <br>
-        <h4>your approximate price is </h4><h3>{{ prediction_text }}</h3>
+        <h4>your approximate price is {{ prediction_text }}</h4>
 
     </div>
 
