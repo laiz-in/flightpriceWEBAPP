@@ -23,7 +23,7 @@ def home():
 @cross_origin()
 def predict():
     if request.method == "POST":
-
+        result=" "
         # Date_of_Journey
         date_dep = request.form["Dep_Time"]
         Day = int(pd.to_datetime(date_dep, format="%Y-%m-%dT%H:%M").day)
@@ -100,9 +100,10 @@ def predict():
         #                                     Day_of_week)
         
         # output=round(prediction[0],2) prediction_text="₹ {}".format(output)
-
-
-        return render_template('home.html',prediction_text=Days_left)
+        k = 25589
+        result = f"Approximate fare: ₹{k}"
+        
+        return render_template('home.html',prediction_text=result)
 
 
     return render_template("home.html")

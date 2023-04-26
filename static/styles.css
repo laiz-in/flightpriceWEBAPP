@@ -3,31 +3,42 @@ body {
   background-size: cover;
   background-position: center;
 }
-.navbar #head {
-  font-family: 'Poppins', sans-serif;
-  margin-top: 15px;
-  margin-left: 20%;
-  color: #53055c;
-  font-weight: 800;
-  font-size: 55px;
+
+#head img {
+  top: 0;
+  height: 110px;
+  margin-left: 67%;
 }
-.navbar #head a{
-  color: #1d0220;
-  font-weight: 800;
-  font-size: 55px;
+#head{
+  display: flex;
 }
-.navbar #head a:hover {
-  color: #850641;
-}
-.navbar #head img {
-  width: 50px;
-  height: 50px;
-  
+.navbar #head{
+  max-height: 75px;
+  top: 2px;
+  margin-left: 25px;
 }
 .col-2 img{
   width :45px;
  
 }
+.rowfor3 .card-body .options{
+  max-width: 78px;
+}
+.rowfor3{
+  display: flex;
+  justify-content: space-between;
+
+}
+#head .git img{
+  margin-top: 20px;
+  height: 65px;
+  margin-left:750px;
+}
+.container{
+  max-width: 50%;
+  margin-left: 12%;
+}
+
 .row .col-2{
   align-items: center;
   justify-content: center;
@@ -39,32 +50,56 @@ body {
 }
 
 #button{
-  background-color: rgb(5, 5, 82);
+  margin-left: 0%;
+  background: linear-gradient(to right,rgb(10, 125, 202),rgb(52, 137, 218));
   -webkit-box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53); 
-  box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.43);
-  color:white;
+  box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53);
+  color:rgb(34, 34, 34);
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
-  min-width: 200px;
+  min-width: 360px;
+  max-width: 350px;
   min-height: 40px;
   font-size: 35px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 7px 7px 7px 7px;
+  border-radius: 13px;
+  margin-bottom: 8px;
   border: none;
+  margin-top: 15px;
 }
 #button:hover{
-  background-color: rgb(14, 14, 66);
+  background: linear-gradient(to right,rgb(4, 133, 219),rgb(107, 167, 223));
 
 }
 h5{
   font-weight: 900;
 }
+.no-background {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+.rowfor3 div:nth-child(2) {
+  margin-right: 12px;
+}
 h4{
-  color: rgb(245, 245, 248);
+  color: rgb(64, 204, 157);
+  padding: 7px;
   font-weight: 600;
   font-size: 45px;
+  background: linear-gradient(to right,rgb(58, 56, 56),rgb(26, 24, 25));
+  webkit-box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53); 
+   box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.43);
+   border-radius: 13px;
+   max-width: fit-content;
+   margin-left: 12.5%;
+   text-decoration: none;
+   min-width: none;
+}
+h4::before {
+  content: none;
 }
 h3{
   width: fit-content;
@@ -80,10 +115,10 @@ h3{
   border-radius: 15px;
   padding: 8px;
   font-size: 16px;
-  background-color: rgb(58, 59, 59);
+  background: linear-gradient(to right,rgb(58, 56, 56),rgb(48, 44, 46));
   color: white;
   -webkit-box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53); 
-   box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.43);
+   box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53);
 }.card-body{
   font-family: 'Poppins', sans-serif;
   outline: none;
@@ -97,27 +132,33 @@ h3{
 }
 
 .card-body .options {
-  background-color: rgb(64, 204, 157);
+  background-color: rgb(65, 66, 66);
   border: none;
   outline: none;
-  border-radius: 8px;
-  box-shadow: -1px 6px 20px 3px rgba(0,0,0,0.63);
+  border-radius: 3px;
+  box-shadow: -1px 6px 20px 3px rgba(36, 34, 34, 0.53);
   padding: 3px;
-  color: rgb(70, 71, 71);
-  max-width: 500px;
+  color: rgb(122, 124, 124);
+  max-width: fit-content;
+  font-family: 'Poppins', sans-serif;
+   font-weight: 800;
 }
 
+
+
 .card-body input{
-  background-color: rgb(64, 204, 157);
+  background-color: rgb(65, 66, 66);
   border: none;
   outline: none;
-  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+   font-weight: 800;
+  border-radius: 2px;
   max-width: fit-content;
-  -webkit-box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53); 
-   box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.43);
+  box-shadow: -1px 6px 20px 3px rgba(36, 34, 34, 0.53);
   padding: 3px;
-  color: rgb(70, 71, 71);
+  color: rgb(124, 126, 126);
   appearance: none;
+
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -131,10 +172,34 @@ input[type="number"] {
 /* ============================================================================================================================================================= */
 
 @media screen and (max-width: 768px) {
-  .navbar #head a{
-    color: #1d0220;
-    font-weight: 800;
-    font-size: 25px;
+  .container{
+    min-width: 100%;
+    margin-left: 2px;
+    font-size: 20px;
+  }
+#head img {
+  float: left;
+  max-height: 75px;
+  margin-left: 0;
+  padding-left: 0;
+}
+#head .git img{
+  height: 35px;
+  margin-left: 135px;
+  margin-top: 19px;
+}
+h4{
+  font-size: 25px;
+  margin-left: 15px;
+  min-width:80%;
+  text-decoration:none ;
+}
+  .card-body input {
+    width: 100%;
+  }
+  .card-body .option {
+    width: 100%;
+    max-width: 80px;
   }
   .arrow .places-row{
     display: block;
@@ -170,6 +235,42 @@ input[type="number"] {
 .card-body select {
   width: 100%;
 }
+.col-sm-4{
+  padding:8px;
+  max-width: 155px;
+  margin-top: 3px;
+}
+.rowfor3{
+  align-items: flex;
+  justify-content: space-between;
+  flex-basis: 30%;
+}
+.navbar #head img {
+  top: 0px;
+  height: 100px;
+  margin-left: 2px;
+}
+.navbar #head{
+  max-height: 75px;
+  top: 0px;
+  margin-left: 0px;
+}
+#button{
+  font-size: 25px;
+  margin-top: 18px;
+  padding: 5px;
+  width: 60%;
+  justify-content: center;
+  margin-left: 0px;
+  background: linear-gradient(to right,rgb(10, 125, 202),rgb(52, 137, 218));
+  font-family: 'Poppins', sans-serif;
+  color: #2b2a2b;
 
-
+}
+.card{
+  margin-top: 15px;
+}
+.rowfor3 .card-body .options{
+  min-width: fit-content;
+}
 }
