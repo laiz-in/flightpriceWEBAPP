@@ -21,9 +21,18 @@ To run this application on your local machine, follow these steps:
 
 # Training of the model
 
-after searching for a better algorithmsm , i have concluded that random forest regressor gives the best score. so this model have been trained on random forest regressor from scikit-learn
+After researching for a better algorithm , i have concluded that random forest regressor gives the best score. so this model have been trained on random forest regressor from scikit-learn . and training tookplace for a few hours in my below specification with normal CPU
+
+ - 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz   2.42 GHz
+ - 16GB ram
+ - nvidia 2GB dedicated graphics
 
 # Data-preprocessing
+ 
+ data-preprocessing meant to be terminating unwanted datas , null values
+ extracting needful informations from existing columns and clean up the entire dataset
+
+ all the steps are given in the jupyter notebook 
  
  preprocessor object is also saved for the transformation of new dataframe
  we have used pickle library to save both model and preprocessor. 
