@@ -8,7 +8,7 @@ from src.exception import CustomException
 from datetime import datetime
 import sys
 from flask_cors import cross_origin
-
+from src.predict_pipeline import PredictPipeline, CustomData
 app = Flask(__name__)
 
 
@@ -64,33 +64,31 @@ def predict():
             Classes=request.form['Classes']
             Source = request.form["Source"]
             Destination = request.form["Destination"]
-            df = [{
-            'Airline': Airline,
-            'Classes': Classes,
-            'Source': Source,
-            'Departure': Departure,
-            'Total_stops': Total_stops,
-            'Arrival': Arrival,
-            'Destination': Destination,
-            'Duration_in_hours': Duration_in_hours,
-            'Days_left': Days_left,
-            'Year': Year,
-            'Month': Month,
-            'Day': Day,
-            'Day_of_week': Day_of_week
-            }]
-            data = pd.DataFrame(df, index=[13])
+
+            data = CustomData(
+            Airline,
+            Classes,
+            Source,
+            Departure,
+            Total_stops,
+            Arrival,
+            Destination,
+            Duration_in_hours,
+            Days_left,
+            Year,
+            Month,
+            Day,
+            Day_of_week
+            )
             logging.info("dataframe is created on the basis of user input")
         except Exception as e:
             raise CustomException(e,sys)
-
-        with open('artifacts/preprocessor.pkl', 'rb') as file:
-            preprocessing_pipeline = pickle.load(file)
-        with open('artifacts/random_forest_model.pkl', 'rb') as f:
-            model = pickle.load(f)
-        preprocessed_new_data = preprocessing_pipeline.transform(data)
-        prediction = model.predict(preprocessed_new_data)
-        result= int(prediction[0])
+        
+        pred_df=data.get_data_as_data_frame()
+        predict_pipeline=PredictPipeline()
+        results=predict_pipeline.predict(pred_df)
+        logging.info("predicted the output")
+        result= int(results[0])
         result=abs(result)
 
         results = f"Approximate fare: ₹{result}"
