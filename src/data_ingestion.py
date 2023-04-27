@@ -48,9 +48,3 @@ class DataIngestion:
         except Exception as e:
             raise CustomException(e,sys)
         
-if __name__ == "__main__":
-    data_ingestion = DataIngestion()
-    train_path, test_path = data_ingestion.initiate_data_ingestion()
-
-    print(train_path)
-    print(test_path)

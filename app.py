@@ -91,7 +91,7 @@ def predict():
         result= int(results[0])
         result=abs(result)
 
-        results = f"Approximate fare: ₹{result}"
+        results = f"Approximate fare: INR {result}"
         return render_template('home.html',prediction_text=results)
 
 

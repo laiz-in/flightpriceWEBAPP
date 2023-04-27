@@ -57,8 +57,8 @@ body {
   color:rgb(34, 34, 34);
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
-  min-width: 360px;
-  max-width: 350px;
+  min-width: 373px;
+  max-width: 373px;
   min-height: 40px;
   font-size: 35px;
   justify-content: center;
@@ -67,7 +67,7 @@ body {
   border-radius: 13px;
   margin-bottom: 8px;
   border: none;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 #button:hover{
   background: linear-gradient(to right,rgb(4, 133, 219),rgb(107, 167, 223));
@@ -85,13 +85,14 @@ h5{
   margin-right: 12px;
 }
 h4{
-  color: rgb(64, 204, 157);
+  color: rgb(245, 248, 247);
   padding: 7px;
   font-weight: 600;
   font-size: 45px;
-  background: linear-gradient(to right,rgb(58, 56, 56),rgb(26, 24, 25));
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right,rgb(49, 49, 49),rgb(26, 24, 25));
   webkit-box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53); 
-   box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.43);
+   box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.63);
    border-radius: 13px;
    max-width: fit-content;
    margin-left: 12.5%;
@@ -250,6 +251,11 @@ h4{
   height: 100px;
   margin-left: 2px;
 }
+.rowfor3 .col-sm-2:nth-child(2) .card {
+  min-width: 450px;
+  max-width: 450px;
+  margin-right: 2px;
+}
 .navbar #head{
   max-height: 75px;
   top: 0px;
@@ -273,4 +279,24 @@ h4{
 .rowfor3 .card-body .options{
   min-width: fit-content;
 }
+}
+@media screen and (min-width: 1024px) {
+  .rowfor3 .col-sm-6{
+    margin-left: 55px;
+    max-width: 400px;
+    min-width: 400px;
+  }
+  .rowfor3 .col-sm-2{
+   min-width: 190px;
+   max-width: 190px;
+   padding-right: 3px;
+  }
+  .rowfor3 .col-sm-2 .options{
+    min-width: 130px;
+   }
+  .rowfor3 .col-sm-2:nth-child(2){
+    margin-left: 1px;
+    margin-right: 100px;
+    
+   }
 }
