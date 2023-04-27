@@ -1,5 +1,4 @@
 from flask import Flask, request, render_template
-from flask_cors import cross_origin
 from src import data_ingestion
 from src.data_transformation import DataTransformation
 import pickle
@@ -8,10 +7,9 @@ from src.logger import logging
 from src.exception import CustomException
 from datetime import datetime
 import sys
+from flask_cors import cross_origin
 
 app = Flask(__name__)
-model = pickle.load(open("notebook/model/random_forest_model.pkl", "rb"))
-
 
 
 @app.route("/")
@@ -86,25 +84,9 @@ def predict():
         except Exception as e:
             raise CustomException(e,sys)
 
-        # obj= DataTransformation()
-        # prediction=obj.get_data_transformer(Airline,
-        #                                     Classes,
-        #                                     Source, 
-        #                                     Departure,
-        #                                     Total_stops,
-        #                                     Arrival,
-        #                                     Destination,
-        #                                     Duration_in_hours,
-        #                                     Days_left,
-        #                                     Year,
-        #                                     Month,
-        #                                     Day,
-        #                                     Day_of_week)
-        
-        # output=round(prediction[0],2) prediction_text="₹ {}".format(output)
-        with open('notebook/model/preprocessor.pkl', 'rb') as file:
+        with open('artifacts/preprocessor.pkl', 'rb') as file:
             preprocessing_pipeline = pickle.load(file)
-        with open('notebook/model/random_forest_model.pkl', 'rb') as f:
+        with open('artifacts/random_forest_model.pkl', 'rb') as f:
             model = pickle.load(f)
         preprocessed_new_data = preprocessing_pipeline.transform(data)
         prediction = model.predict(preprocessed_new_data)
