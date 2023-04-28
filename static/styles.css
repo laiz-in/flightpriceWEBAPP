@@ -92,7 +92,7 @@ h4{
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to right,rgb(49, 49, 49),rgb(26, 24, 25));
   webkit-box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53); 
-   box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.63);
+  box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.63);
    border-radius: 13px;
    max-width: fit-content;
    margin-left: 12.5%;
