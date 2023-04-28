@@ -83,20 +83,20 @@ def predict():
             logging.info("dataframe is created on the basis of user input")
         except Exception as e:
             raise CustomException(e,sys)
-        
-        pred_df=data.get_data_as_data_frame()
-        predict_pipeline=PredictPipeline()
-        results=predict_pipeline.predict(pred_df)
-        logging.info("predicted the output")
-        result= int(results[0])
-        result=abs(result)
-
+        try:          
+            pred_df=data.get_data_as_data_frame()
+            predict_pipeline=PredictPipeline()
+            results=predict_pipeline.predict(pred_df)
+            logging.info("predicted the output")
+            result= int(results[0])
+            result=abs(result)
+            logging.info("prediction reached the app.py")
+        except Exception as e:
+            raise CustomException(e,sys)
+          
         results = f"Approximate fare: INR {result}"
         return render_template('home.html',prediction_text=results)
-
-
     return render_template("home.html")
-
 
 
 
