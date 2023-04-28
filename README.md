@@ -1,13 +1,13 @@
 # Predicting the flight fare based on 452000+ flight price records
 
-i have collected this dataset from below link
-url : https://www.kaggle.com/datasets/yashdharme36/airfare-ml-predicting-flight-fares
+I have collected this dataset from below link
+https://www.kaggle.com/datasets/yashdharme36/airfare-ml-predicting-flight-fares
 
 
 # Usage
 
-Over 450000 datas of flight records this machine learning algorithm can predict the flight price between certain indain cities
-. users can input the features such as date, airline ,class, duration ,source and destinantion 
+Over 450000 datas of flight records this, machine learning algorithm can predict the flight price between certain indain cities
+. users can input the features such as date, airline ,class, duration ,source and destinantion and get the fare predicited
 
 # Installation
 To run this application on your local machine, follow these steps:
@@ -34,7 +34,8 @@ After researching for a better algorithm , i have concluded that random forest r
 
  all the steps are given in the jupyter notebook 
  
- preprocessor object is also saved for the transformation of new dataframe
- we have used pickle library to save both model and preprocessor. 
+ preprocessor object is also saved for the transformation of new dataframe.
+ we have used pickle library to save both model and preprocessor.
+ 
 
  
