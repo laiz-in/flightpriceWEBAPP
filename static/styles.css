@@ -262,16 +262,17 @@ h4{
   margin-left: 0px;
 }
 #button{
-  font-size: 25px;
+  font-size: 19px;
   margin-top: 18px;
-  padding: 5px;
-  width: 60%;
+  padding: 9px;
+  width: 30%;
+  min-width: 37%;
   justify-content: center;
   margin-left: 0px;
   background: linear-gradient(to right,rgb(10, 125, 202),rgb(52, 137, 218));
   font-family: 'Poppins', sans-serif;
-  color: #2b2a2b;
-
+  color: #242224;
+ 
 }
 .card{
   margin-top: 15px;

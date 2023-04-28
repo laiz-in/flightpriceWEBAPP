@@ -2,10 +2,6 @@ import os
 import sys
 from exception import CustomException
 from logger import logging
-from data_transformation import DataTransformation
-from data_transformation import DataTransformationConfig
-# from model_training import ModelTrainerConfig
-# from model_training import ModelTrainer
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
