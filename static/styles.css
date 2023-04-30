@@ -54,7 +54,7 @@ body {
   background: linear-gradient(to right,rgb(10, 125, 202),rgb(52, 137, 218));
   -webkit-box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53); 
   box-shadow: -1px 6px 30px 3px rgba(0,0,0,0.53);
-  color:rgb(34, 34, 34);
+  color:#ffffff;
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   min-width: 373px;
@@ -76,7 +76,7 @@ body {
 h5{
   font-weight: 900;
 }
-.no-background {
+button .no-background {
   background-color: transparent;
   padding: 0;
   margin: 0;
@@ -271,7 +271,7 @@ h4{
   margin-left: 0px;
   background: linear-gradient(to right,rgb(7, 125, 204),rgb(52, 137, 218));
   font-family: 'Poppins', sans-serif;
-  color: #242224;
+  color: #ffffff;
  
 }
 .card{
