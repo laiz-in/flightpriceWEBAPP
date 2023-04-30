@@ -292,6 +292,10 @@ h4{
    max-width: 190px;
    padding-right: 3px;
   }
+  .rowfor3 .col-sm-6 .options{
+    min-width: 223px;
+
+  }
   .rowfor3 .col-sm-2 .options{
     min-width: 130px;
    }
