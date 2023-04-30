@@ -36,6 +36,7 @@ class DataTransformation:
             logging.info("preprocessor is created")
             return preprocessor
         except Exception as e:
+           logging.info("error occured in data transformation")
            raise CustomException(e,sys) 
         
     def initiate_data_transformation(self,train_path,test_path):

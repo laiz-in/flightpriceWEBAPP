@@ -17,9 +17,11 @@ class PredictPipeline:
 
             model=load_object(file_path=model_path)
             preprocessor=load_object(file_path=preprocessor_path)
+            logging.info("loaded model and preprocessor")
             data_scaled=preprocessor.transform(features)
+            logging.info("data transformation completed")
             prediction=model.predict(data_scaled)
-            logging.info("model predicted")
+            logging.info("model predicted inside predict pipeline")
             return prediction
         
         except Exception as e:
